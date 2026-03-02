@@ -18,11 +18,6 @@ class QuoteApprovalShipmentConnectorDependencyProvider extends AbstractDependenc
      */
     public const SERVICE_SHIPMENT = 'SERVICE_SHIPMENT';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -31,11 +26,6 @@ class QuoteApprovalShipmentConnectorDependencyProvider extends AbstractDependenc
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addShipmentService(Container $container): Container
     {
         $container->set(static::SERVICE_SHIPMENT, function (Container $container) {

@@ -38,9 +38,6 @@ class ShipmentQuoteFieldProvider implements ShipmentQuoteFieldProviderInterface
      */
     protected $quoteApprovalFacade;
 
-    /**
-     * @param \Spryker\Zed\QuoteApprovalShipmentConnector\Dependency\Facade\QuoteApprovalShipmentConnectorToQuoteApprovalFacadeInterface $quoteApprovalFacade
-     */
     public function __construct(QuoteApprovalShipmentConnectorToQuoteApprovalFacadeInterface $quoteApprovalFacade)
     {
         $this->quoteApprovalFacade = $quoteApprovalFacade;

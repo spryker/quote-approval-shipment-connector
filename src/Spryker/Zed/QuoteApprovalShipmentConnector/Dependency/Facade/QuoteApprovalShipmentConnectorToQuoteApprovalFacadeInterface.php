@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\QuoteTransfer;
 
 interface QuoteApprovalShipmentConnectorToQuoteApprovalFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     public function isQuoteInApprovalProcess(QuoteTransfer $quoteTransfer): bool;
 }

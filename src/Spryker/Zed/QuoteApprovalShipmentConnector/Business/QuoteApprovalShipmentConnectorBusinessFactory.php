@@ -18,9 +18,6 @@ use Spryker\Zed\QuoteApprovalShipmentConnector\QuoteApprovalShipmentConnectorDep
  */
 class QuoteApprovalShipmentConnectorBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\QuoteApprovalShipmentConnector\Business\QuoteFieldProvider\ShipmentQuoteFieldProviderInterface
-     */
     public function createShipmentQuoteFieldProvider(): ShipmentQuoteFieldProviderInterface
     {
         return new ShipmentQuoteFieldProvider(
@@ -28,9 +25,6 @@ class QuoteApprovalShipmentConnectorBusinessFactory extends AbstractBusinessFact
         );
     }
 
-    /**
-     * @return \Spryker\Zed\QuoteApprovalShipmentConnector\Dependency\Facade\QuoteApprovalShipmentConnectorToQuoteApprovalFacadeInterface
-     */
     public function getQuoteApprovalFacade(): QuoteApprovalShipmentConnectorToQuoteApprovalFacadeInterface
     {
         return $this->getProvidedDependency(QuoteApprovalShipmentConnectorDependencyProvider::FACADE_QUOTE_APPROVAL);

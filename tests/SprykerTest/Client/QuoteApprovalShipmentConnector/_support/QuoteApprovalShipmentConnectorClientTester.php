@@ -42,17 +42,11 @@ class QuoteApprovalShipmentConnectorClientTester extends Actor
      */
     protected const SHIPMENT_EXPENSE_TYPE = 'SHIPMENT_EXPENSE_TYPE';
 
-    /**
-     * @return \Spryker\Client\QuoteApprovalShipmentConnector\QuoteApprovalShipmentConnectorClientInterface
-     */
     public function getClient(): QuoteApprovalShipmentConnectorClientInterface
     {
         return $this->getLocator()->quoteApprovalShipmentConnector()->client();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function createQuoteTransferWithMultiShipment(): QuoteTransfer
     {
         $quoteTransfer = (new QuoteBuilder([
@@ -90,9 +84,6 @@ class QuoteApprovalShipmentConnectorClientTester extends Actor
         return $quoteTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function createQuoteTransferWithSingleShipment(): QuoteTransfer
     {
         return (new QuoteBuilder([

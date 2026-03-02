@@ -21,11 +21,6 @@ class QuoteApprovalShipmentConnectorDependencyProvider extends AbstractBundleDep
      */
     public const FACADE_QUOTE_APPROVAL = 'FACADE_QUOTE_APPROVAL';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -34,11 +29,6 @@ class QuoteApprovalShipmentConnectorDependencyProvider extends AbstractBundleDep
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addQuoteApprovalFacade(Container $container): Container
     {
         $container->set(static::FACADE_QUOTE_APPROVAL, function (Container $container) {

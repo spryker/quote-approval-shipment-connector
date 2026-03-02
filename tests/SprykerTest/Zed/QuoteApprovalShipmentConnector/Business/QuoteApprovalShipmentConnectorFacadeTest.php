@@ -47,9 +47,6 @@ class QuoteApprovalShipmentConnectorFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testGetQuoteFieldsAllowedForSavingReturnsShipmentFieldsForApprovedQuoteWithSingleShipment(): void
     {
         //Arrange
@@ -72,9 +69,6 @@ class QuoteApprovalShipmentConnectorFacadeTest extends Unit
         ]);
     }
 
-    /**
-     * @return void
-     */
     public function testGetQuoteFieldsAllowedForSavingReturnsEmptyArrayForApprovedQuoteWithMultiShipment(): void
     {
         //Arrange
@@ -88,9 +82,6 @@ class QuoteApprovalShipmentConnectorFacadeTest extends Unit
         $this->assertCount(0, $quoteFields);
     }
 
-    /**
-     * @return void
-     */
     public function testGetQuoteFieldsAllowedForSavingReturnsEmptyArrayForQuoteWithoutApproval(): void
     {
         //Arrange

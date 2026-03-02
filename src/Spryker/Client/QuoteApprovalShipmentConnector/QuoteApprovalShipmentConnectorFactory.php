@@ -14,9 +14,6 @@ use Spryker\Client\QuoteApprovalShipmentConnector\Dependency\Service\QuoteApprov
 
 class QuoteApprovalShipmentConnectorFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\QuoteApprovalShipmentConnector\Checker\QuoteShipmentCheckerInterface
-     */
     public function createQuoteShipmentChecker(): QuoteShipmentCheckerInterface
     {
         return new QuoteShipmentChecker(
@@ -24,9 +21,6 @@ class QuoteApprovalShipmentConnectorFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\QuoteApprovalShipmentConnector\Dependency\Service\QuoteApprovalShipmentConnectorToShipmentServiceInterface
-     */
     public function getShipmentService(): QuoteApprovalShipmentConnectorToShipmentServiceInterface
     {
         return $this->getProvidedDependency(QuoteApprovalShipmentConnectorDependencyProvider::SERVICE_SHIPMENT);

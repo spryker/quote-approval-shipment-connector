@@ -26,19 +26,11 @@ class QuoteShipmentChecker implements QuoteShipmentCheckerInterface
      */
     protected $shipmentService;
 
-    /**
-     * @param \Spryker\Client\QuoteApprovalShipmentConnector\Dependency\Service\QuoteApprovalShipmentConnectorToShipmentServiceInterface $shipmentService
-     */
     public function __construct(QuoteApprovalShipmentConnectorToShipmentServiceInterface $shipmentService)
     {
         $this->shipmentService = $shipmentService;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     public function checkQuoteShipment(QuoteTransfer $quoteTransfer): bool
     {
         if ($this->hasItemsWithoutShipment($quoteTransfer)) {
@@ -59,11 +51,6 @@ class QuoteShipmentChecker implements QuoteShipmentCheckerInterface
         return true;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     protected function hasItemsWithoutShipment(QuoteTransfer $quoteTransfer): bool
     {
         foreach ($quoteTransfer->getItems() as $itemTransfer) {
@@ -75,12 +62,6 @@ class QuoteShipmentChecker implements QuoteShipmentCheckerInterface
         return false;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     * @param \Generated\Shared\Transfer\ShipmentGroupTransfer $shipmentGroupTransfer
-     *
-     * @return bool
-     */
     protected function checkShipmentExpenseSetInQuote(QuoteTransfer $quoteTransfer, ShipmentGroupTransfer $shipmentGroupTransfer): bool
     {
         $shipmentTransfer = $shipmentGroupTransfer->getShipment();
@@ -98,12 +79,6 @@ class QuoteShipmentChecker implements QuoteShipmentCheckerInterface
         return false;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ExpenseTransfer $expenseTransfer
-     * @param string $itemShipmentKey
-     *
-     * @return bool
-     */
     protected function matchShipmentExpense(ExpenseTransfer $expenseTransfer, string $itemShipmentKey): bool
     {
         return $expenseTransfer->getType() === static::SHIPMENT_EXPENSE_TYPE

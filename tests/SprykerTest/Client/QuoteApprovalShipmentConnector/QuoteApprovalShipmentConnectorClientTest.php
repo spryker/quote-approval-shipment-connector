@@ -33,9 +33,6 @@ class QuoteApprovalShipmentConnectorClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testIsQuoteShipmentApplicableForApprovalProcessReturnsTrueForCorrectQuoteWithMultiShipment(): void
     {
         //Arrange
@@ -48,9 +45,6 @@ class QuoteApprovalShipmentConnectorClientTest extends Unit
         $this->assertTrue($isQuoteShipmentApplicableForApprovalProcess);
     }
 
-    /**
-     * @return void
-     */
     public function testIsQuoteShipmentApplicableForApprovalProcessReturnsTrueForCorrectQuoteWithSingleShipment(): void
     {
         //Arrange
@@ -63,9 +57,6 @@ class QuoteApprovalShipmentConnectorClientTest extends Unit
         $this->assertTrue($isQuoteShipmentApplicableForApprovalProcess);
     }
 
-    /**
-     * @return void
-     */
     public function testIsQuoteShipmentApplicableForApprovalProcessReturnsFalseForQuoteWithoutShipment(): void
     {
         //Arrange

@@ -24,11 +24,6 @@ class QuoteApprovalShipmentConnectorToQuoteApprovalFacadeBridge implements Quote
         $this->quoteApprovalFacade = $quoteApprovalFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     public function isQuoteInApprovalProcess(QuoteTransfer $quoteTransfer): bool
     {
         return $this->quoteApprovalFacade->isQuoteInApprovalProcess($quoteTransfer);
